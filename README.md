@@ -1,19 +1,36 @@
-🚀 Features
+# Currency Converter 💱
 
-Convert currency between multiple countries
+A responsive web application that allows users to convert currencies in real time using live exchange rate data.
 
-Real-time exchange rates using API
+## 🚀 Live Demo
+👉 https://currencyconverter4545.netlify.app/
 
-User-friendly and responsive UI
+## 📂 GitHub Repository
+👉 https://github.com/Aashutoshpatil/Currency-Converter
 
-Error handling for invalid inputs
+## 🛠 Tech Stack
+- HTML  
+- CSS  
+- JavaScript  
+- Public Currency Exchange API  
 
-Fast and lightweight
+## ✨ Features
+- Real-time currency conversion  
+- Clean and user-friendly UI  
+- Responsive design (mobile & desktop)  
+- Error handling for invalid inputs  
 
-🛠️ Tech Stack
+## 📸 Screenshots
+<img width="1362" height="628" alt="image" src="https://github.com/user-attachments/assets/6c5d974c-63cc-437b-8b7d-3e55ab621459" />
 
-HTML – Structure of the application
 
-CSS – Styling and responsive design
+## 🧠 What I Learned
+- Working with APIs using JavaScript  
+- DOM manipulation  
+- Handling asynchronous operations  
+- Improving UI responsiveness  
 
-JavaScript – Logic and API integration
+## 👨‍💻 Author
+**Aashutosh Patil**  
+Fresher Full Stack Developer  
+Open to Internship Opportunities 🚀
