@@ -3,8 +3,7 @@
 A responsive web application that allows users to convert currencies in real time using live exchange rate data.
 
 ## 🚀 Live Demo
-👉 https://currencyconverter4545.netlify.app/
-
+👉 https://aashutoshpatil.github.io/Currency-Converter/
 ## 📂 GitHub Repository
 👉 https://github.com/Aashutoshpatil/Currency-Converter
 
