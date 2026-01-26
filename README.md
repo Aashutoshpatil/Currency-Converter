@@ -3,7 +3,7 @@
 A responsive web application that allows users to convert currencies in real time using live exchange rate data.
 
 ## 🚀 Live Demo
-👉 https://aashutoshpatil.github.io/Currency-Converter/
+👉https://currency-converter-dusky-seven.vercel.app/
 ## 📂 GitHub Repository
 👉 https://github.com/Aashutoshpatil/Currency-Converter
 
