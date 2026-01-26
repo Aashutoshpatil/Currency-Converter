@@ -1,62 +1,75 @@
-const dropdowns = document.querySelectorAll("select");
-const btn = document.querySelector("button");
-const fromCurr = document.querySelector("select[name='from']");
-const toCurr = document.querySelector("select[name='to']");
-const msg = document.querySelector(".msg");
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4e4ba;
+    
+}
+.container{
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 1rem;
+    min-height: 45vh;
+    width: 40vh;
+}
+form{
+    margin: 2rem 0 1rem 0;
+}
+form select,
+button,
+input {
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 0.75rem;
+}
+form input{
+    border: 1px solid lightgray;
+    font-size: 1rem;
+    height: 3rem;
+    padding-left: 0.5rem;
+}
+.dropdown{
+     display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+    
 
-/* Populate dropdowns */
-dropdowns.forEach((select) => {
-  for (let code in countryList) {
-    let option = document.createElement("option");
-    option.value = code;
-    option.innerText = code;
+} 
+.dropdown i {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+.select-container img {
+    max-width: 2rem;
 
-    if (select.name === "from" && code === "USD") option.selected = true;
-    if (select.name === "to" && code === "INR") option.selected = true;
-
-    select.append(option);
-  }
-
-  select.addEventListener("change", () => updateFlag(select));
-});
-
-/* Update flag */
-function updateFlag(select) {
-  const img = select.previousElementSibling;
-  img.src = `https://flagsapi.com/${countryList[select.value]}/flat/64.png`;
+}
+.select-container{
+    display: flex;
+    justify-content: center;
+    width: 6rem;
+    align-items: center;
+    border-radius: 0.5rem;
+    border: 1px solid lightgray;
 }
 
-/* Fetch exchange rate (FRANKFURTER API) */
-async function updateExchangeRate() {
-  const amount = document.querySelector("input").value || 1;
-
-  const url = `https://api.frankfurter.app/latest?amount=${amount}&from=${fromCurr.value}&to=${toCurr.value}`;
-
-  try {
-    const response = await fetch(url);
-    const data = await response.json();
-
-    const rate = data.rates[toCurr.value];
-    msg.innerText = `${amount} ${fromCurr.value} = ${rate} ${toCurr.value}`;
-  } catch (err) {
-    msg.innerText = "Failed to fetch exchange rate ❌";
-    console.error(err);
-  }
+.select-container select{
+    font-size: 1rem;
+    width: auto;
 }
-
-/* Button click */
-btn.addEventListener("click", (e) => {
-  e.preventDefault();
-  updateExchangeRate();
-});
-
-/* On load */
-window.onload = updateExchangeRate;
-
-
-
-//   description of this project for resume 
-//  “Built a responsive Currency Converter web app using HTML,
-//  CSS, and JavaScript, integrating live
-//  exchange rate API with dynamic currency 
-// flags and real-time conversion functionality.”
+.msg{
+    margin: 2rem 0 2rem 0 ;
+}
+form button{
+    height: 3rem;
+    background-color: #af4d98;
+    color: #fff;
+    font-size: 1.15rem;
+    cursor: pointer;
+}
